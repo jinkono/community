@@ -1,0 +1,60 @@
+name: 🐛 Bug report
+description: Create a report to help us improve
+labels: ["report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an issue.
+
+        Please fill in as much of the following form as you're able.
+  - type: input
+    attributes:
+      label: Application
+      description: Select which application
+  - type: dropdown
+    id: application
+    attributes:
+      label: Application
+      description: This is issue is regarding what JinkoNo application?
+      options:
+        - Browser Extension
+        - Web Platform
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What steps will reproduce the bug?
+      description: >
+        Enter details about how to reproduce your bug, preferably as simple as 
+        possible.
+  - type: textarea
+    attributes:
+      label: How often does it reproduce? Is there a required condition?
+  - type: textarea
+    attributes:
+      label: What is the expected behavior? Why is that the expected behavior?
+      description: If possible please provide textual output instead of screenshots.
+  - type: textarea
+    attributes:
+      label: What do you see instead?
+      description: If possible please provide textual output instead of screenshots.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Additional information
+      description: Tell us anything else you think we should know.
